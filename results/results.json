@@ -1,0 +1,416 @@
+{
+  "config": {
+    "algorithm": "Discriminative variational Bayesian last layers (D-VBLL), diagonal covariance",
+    "package": "vbll==0.4.9",
+    "dataset": "FashionMNIST",
+    "data_root": "FashionMNIST dataset root supplied via --data-root",
+    "device": "mps",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "split_seed": 2026,
+    "train_size": 12000,
+    "validation_size": 2000,
+    "test_size": 10000,
+    "epochs": 10,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "input": "float32 x/255; normalize as (x-0.5)/0.5; no augmentation",
+    "feature_dimension": 64,
+    "last_layer_bias": false,
+    "vbll": {
+      "parameterization": "diagonal",
+      "regularization_weight": 8.333333333333333e-05,
+      "prior_scale_argument": 1.0,
+      "effective_weight_prior_variance": 0.03125,
+      "wishart_scale": 1.0,
+      "dof_argument": 1.0,
+      "internal_wishart_coefficient": 6.0
+    },
+    "mc_samples": 128,
+    "validation_mc_seed": "100000 + training seed (reset each epoch)",
+    "test_mc_seed": "200000 + training seed (same clean/noisy draws)",
+    "model_selection": "minimum validation predictive NLL; earliest epoch on exact tie",
+    "noise": {
+      "distribution": "Gaussian",
+      "sigma": 0.2,
+      "seed": 20261008,
+      "clipping": [
+        0,
+        1
+      ],
+      "applied_before_normalization": true,
+      "noisy_pixels_sha256_float32": "bdc06563f8e82342a0cc4f16dd7012062b195862bf02daeb39044ff39a6764e9"
+    },
+    "ece_bins": 15,
+    "started_at_utc": "2026-10-08T14:57:08.448258+00:00",
+    "test_labels_sha256_int64": "d51d859896c55775b9e9e219b77ff03bcec1b6ac322f313544dc3f9e7bc94fae",
+    "elapsed_seconds": 123.590989112854,
+    "finished_at_utc": "2026-10-08T14:59:12.039244+00:00"
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "model": "baseline",
+      "selected_epoch": 8,
+      "validation_nll": 0.34603658307960805,
+      "condition": "clean",
+      "accuracy": 0.8768,
+      "nll": 0.3439514569638567,
+      "brier": 0.1760879857613762,
+      "ece15": 0.008074041777849173,
+      "mean_confidence": 0.8762548082590104
+    },
+    {
+      "seed": 42,
+      "model": "baseline",
+      "selected_epoch": 8,
+      "validation_nll": 0.34603658307960805,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.7541,
+      "nll": 0.6507619445668467,
+      "brier": 0.3393073022220443,
+      "ece15": 0.061536688771843914,
+      "mean_confidence": 0.8146839880853891
+    },
+    {
+      "seed": 42,
+      "model": "vbll",
+      "selected_epoch": 9,
+      "validation_nll": 0.33759716790477284,
+      "condition": "clean",
+      "accuracy": 0.8793,
+      "nll": 0.34609395879268906,
+      "brier": 0.17717469541074315,
+      "ece15": 0.011796039906144142,
+      "mean_confidence": 0.8833737574368715
+    },
+    {
+      "seed": 42,
+      "model": "vbll",
+      "selected_epoch": 9,
+      "validation_nll": 0.33759716790477284,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.8146,
+      "nll": 0.505488435699155,
+      "brier": 0.26049782623606876,
+      "ece15": 0.01412196663767098,
+      "mean_confidence": 0.8086770972236991
+    },
+    {
+      "seed": 43,
+      "model": "baseline",
+      "selected_epoch": 9,
+      "validation_nll": 0.328388988607567,
+      "condition": "clean",
+      "accuracy": 0.8775,
+      "nll": 0.3467643703767978,
+      "brier": 0.1775456593118755,
+      "ece15": 0.009475536103546612,
+      "mean_confidence": 0.8854407984092831
+    },
+    {
+      "seed": 43,
+      "model": "baseline",
+      "selected_epoch": 9,
+      "validation_nll": 0.328388988607567,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.7393,
+      "nll": 0.6871346915094362,
+      "brier": 0.3584391374624848,
+      "ece15": 0.07974030304104089,
+      "mean_confidence": 0.8190403030410409
+    },
+    {
+      "seed": 43,
+      "model": "vbll",
+      "selected_epoch": 9,
+      "validation_nll": 0.3274503642052819,
+      "condition": "clean",
+      "accuracy": 0.8787,
+      "nll": 0.3420391873081057,
+      "brier": 0.17591595400283774,
+      "ece15": 0.005397373247146583,
+      "mean_confidence": 0.8763898236870765
+    },
+    {
+      "seed": 43,
+      "model": "vbll",
+      "selected_epoch": 9,
+      "validation_nll": 0.3274503642052819,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.7406,
+      "nll": 0.6765853323715295,
+      "brier": 0.35598035096013503,
+      "ece15": 0.06675825872123242,
+      "mean_confidence": 0.8061311991900205
+    },
+    {
+      "seed": 44,
+      "model": "baseline",
+      "selected_epoch": 10,
+      "validation_nll": 0.33892283941288565,
+      "condition": "clean",
+      "accuracy": 0.8786,
+      "nll": 0.34458079045691864,
+      "brier": 0.17639618419940037,
+      "ece15": 0.008617920367419714,
+      "mean_confidence": 0.8846867438659072
+    },
+    {
+      "seed": 44,
+      "model": "baseline",
+      "selected_epoch": 10,
+      "validation_nll": 0.33892283941288565,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.7462,
+      "nll": 0.6687039535075486,
+      "brier": 0.34659340087810475,
+      "ece15": 0.0566586322143674,
+      "mean_confidence": 0.8020184981539845
+    },
+    {
+      "seed": 44,
+      "model": "vbll",
+      "selected_epoch": 10,
+      "validation_nll": 0.6587727785079109,
+      "condition": "clean",
+      "accuracy": 0.8223,
+      "nll": 0.6637804987390993,
+      "brier": 0.26724204323480766,
+      "ece15": 0.053542624427378165,
+      "mean_confidence": 0.8758426244273781
+    },
+    {
+      "seed": 44,
+      "model": "vbll",
+      "selected_epoch": 10,
+      "validation_nll": 0.6587727785079109,
+      "condition": "gaussian_noise_0.2",
+      "accuracy": 0.7911,
+      "nll": 0.6760189399590587,
+      "brier": 0.29956181151859834,
+      "ece15": 0.022851706239581084,
+      "mean_confidence": 0.791272133025527
+    }
+  ],
+  "aggregate": [
+    {
+      "condition": "clean",
+      "model": "baseline",
+      "seeds": 3,
+      "accuracy": {
+        "mean": 0.8776333333333334,
+        "std": 0.000907377172587765
+      },
+      "nll": {
+        "mean": 0.34509887259919103,
+        "std": 0.0014762883515025652
+      },
+      "brier": {
+        "mean": 0.1766766097575507,
+        "std": 0.0007682329823720465
+      },
+      "ece15": {
+        "mean": 0.008722499416271833,
+        "std": 0.0007065756642672038
+      },
+      "mean_confidence": {
+        "mean": 0.8821274501780669,
+        "std": 0.00509981292751915
+      }
+    },
+    {
+      "condition": "clean",
+      "model": "vbll",
+      "seeds": 3,
+      "accuracy": {
+        "mean": 0.8601000000000001,
+        "std": 0.03273713487768896
+      },
+      "nll": {
+        "mean": 0.45063788161329804,
+        "std": 0.18459805448426314
+      },
+      "brier": {
+        "mean": 0.2067775642161295,
+        "std": 0.0523675569864885
+      },
+      "ece15": {
+        "mean": 0.023578679193556298,
+        "std": 0.0261460177509855
+      },
+      "mean_confidence": {
+        "mean": 0.8785354018504421,
+        "std": 0.004199061840816764
+      }
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "model": "baseline",
+      "seeds": 3,
+      "accuracy": {
+        "mean": 0.7465333333333333,
+        "std": 0.007405628490096812
+      },
+      "nll": {
+        "mean": 0.6688668631946105,
+        "std": 0.01818692070450679
+      },
+      "brier": {
+        "mean": 0.3481132801875446,
+        "std": 0.009656050163150959
+      },
+      "ece15": {
+        "mean": 0.0659785413424174,
+        "std": 0.012165049228497198
+      },
+      "mean_confidence": {
+        "mean": 0.8119142630934716,
+        "std": 0.008842454003351898
+      }
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "model": "vbll",
+      "seeds": 3,
+      "accuracy": {
+        "mean": 0.7821000000000001,
+        "std": 0.03781203512110924
+      },
+      "nll": {
+        "mean": 0.6193642360099144,
+        "std": 0.09861974255899873
+      },
+      "brier": {
+        "mean": 0.305346662904934,
+        "std": 0.04800340103671795
+      },
+      "ece15": {
+        "mean": 0.034577310532828164,
+        "std": 0.028209256603247437
+      },
+      "mean_confidence": {
+        "mean": 0.8020268098130822,
+        "std": 0.009400409767826926
+      }
+    }
+  ],
+  "paired_differences_vbll_minus_baseline": [
+    {
+      "condition": "clean",
+      "metric": "accuracy",
+      "per_seed": [
+        0.0024999999999999467,
+        0.0012000000000000899,
+        -0.05630000000000002
+      ],
+      "mean": -0.017533333333333328,
+      "std": 0.033579209837834696
+    },
+    {
+      "condition": "clean",
+      "metric": "nll",
+      "per_seed": [
+        0.002142501828832355,
+        -0.004725183068692129,
+        0.31919970828218064
+      ],
+      "mean": 0.10553900901410695,
+      "std": 0.1850674527915554
+    },
+    {
+      "condition": "clean",
+      "metric": "brier",
+      "per_seed": [
+        0.0010867096493669681,
+        -0.001629705309037749,
+        0.09084585903540729
+      ],
+      "mean": 0.030100954458578837,
+      "std": 0.05262416081604111
+    },
+    {
+      "condition": "clean",
+      "metric": "ece15",
+      "per_seed": [
+        0.003721998128294969,
+        -0.004078162856400029,
+        0.04492470405995845
+      ],
+      "mean": 0.014856179777284463,
+      "std": 0.02633054770129376
+    },
+    {
+      "condition": "clean",
+      "metric": "mean_confidence",
+      "per_seed": [
+        0.007118949177861156,
+        -0.009050974722206617,
+        -0.00884411943852903
+      ],
+      "mean": -0.0035920483276248305,
+      "std": 0.009276572532406114
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "metric": "accuracy",
+      "per_seed": [
+        0.0605,
+        0.0013000000000000789,
+        0.04490000000000005
+      ],
+      "mean": 0.03556666666666671,
+      "std": 0.030683763350236735
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "metric": "nll",
+      "per_seed": [
+        -0.14527350886769164,
+        -0.010549359137906666,
+        0.007314986451510075
+      ],
+      "mean": -0.04950262718469608,
+      "std": 0.08341960228020917
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "metric": "brier",
+      "per_seed": [
+        -0.07880947598597554,
+        -0.0024587865023497635,
+        -0.04703158935950641
+      ],
+      "mean": -0.042766617282610574,
+      "std": 0.03835361047240256
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "metric": "ece15",
+      "per_seed": [
+        -0.047414722134172936,
+        -0.01298204431980847,
+        -0.033806925974786316
+      ],
+      "mean": -0.03140123080958924,
+      "std": 0.01734193911556162
+    },
+    {
+      "condition": "gaussian_noise_0.2",
+      "metric": "mean_confidence",
+      "per_seed": [
+        -0.00600689086169004,
+        -0.012909103851020398,
+        -0.010746365128457502
+      ],
+      "mean": -0.009887453280389313,
+      "std": 0.0035303587933217377
+    }
+  ]
+}

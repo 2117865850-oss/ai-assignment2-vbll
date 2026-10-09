@@ -1,0 +1,54 @@
+{
+  "algorithm": "Discriminative variational Bayesian last layers (D-VBLL), diagonal covariance",
+  "package": "vbll==0.4.9",
+  "dataset": "FashionMNIST",
+  "data_root": "FashionMNIST dataset root supplied via --data-root",
+  "device": "mps",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "split_seed": 2026,
+  "train_size": 12000,
+  "validation_size": 2000,
+  "test_size": 10000,
+  "epochs": 10,
+  "batch_size": 128,
+  "eval_batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "input": "float32 x/255; normalize as (x-0.5)/0.5; no augmentation",
+  "feature_dimension": 64,
+  "last_layer_bias": false,
+  "vbll": {
+    "parameterization": "diagonal",
+    "regularization_weight": 8.333333333333333e-05,
+    "prior_scale_argument": 1.0,
+    "effective_weight_prior_variance": 0.03125,
+    "wishart_scale": 1.0,
+    "dof_argument": 1.0,
+    "internal_wishart_coefficient": 6.0
+  },
+  "mc_samples": 128,
+  "validation_mc_seed": "100000 + training seed (reset each epoch)",
+  "test_mc_seed": "200000 + training seed (same clean/noisy draws)",
+  "model_selection": "minimum validation predictive NLL; earliest epoch on exact tie",
+  "noise": {
+    "distribution": "Gaussian",
+    "sigma": 0.2,
+    "seed": 20261008,
+    "clipping": [
+      0,
+      1
+    ],
+    "applied_before_normalization": true,
+    "noisy_pixels_sha256_float32": "bdc06563f8e82342a0cc4f16dd7012062b195862bf02daeb39044ff39a6764e9"
+  },
+  "ece_bins": 15,
+  "started_at_utc": "2026-10-08T14:57:08.448258+00:00",
+  "test_labels_sha256_int64": "d51d859896c55775b9e9e219b77ff03bcec1b6ac322f313544dc3f9e7bc94fae",
+  "elapsed_seconds": 123.590989112854,
+  "finished_at_utc": "2026-10-08T14:59:12.039244+00:00"
+}

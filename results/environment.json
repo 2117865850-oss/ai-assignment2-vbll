@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "executable": "Python interpreter used to run train.py",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "torch_threads": 4,
+  "mps_available": true,
+  "versions": {
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "numpy": "2.3.5",
+    "vbll": "0.4.9",
+    "matplotlib": "3.11.2"
+  },
+  "vbll_classification_source_sha256": "35a8658888557e2bb74e8eadf08af0dbf13d04d79dfb694ff88ba435f13296aa",
+  "vbll_source_file": "vbll/layers/classification.py"
+}

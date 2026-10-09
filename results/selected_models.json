@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 42,
+    "model": "baseline",
+    "selected_epoch": 8,
+    "validation_nll": 0.34603658307960805
+  },
+  {
+    "seed": 42,
+    "model": "vbll",
+    "selected_epoch": 9,
+    "validation_nll": 0.33759716790477284
+  },
+  {
+    "seed": 43,
+    "model": "baseline",
+    "selected_epoch": 9,
+    "validation_nll": 0.328388988607567
+  },
+  {
+    "seed": 43,
+    "model": "vbll",
+    "selected_epoch": 9,
+    "validation_nll": 0.3274503642052819
+  },
+  {
+    "seed": 44,
+    "model": "baseline",
+    "selected_epoch": 10,
+    "validation_nll": 0.33892283941288565
+  },
+  {
+    "seed": 44,
+    "model": "vbll",
+    "selected_epoch": 10,
+    "validation_nll": 0.6587727785079109
+  }
+]

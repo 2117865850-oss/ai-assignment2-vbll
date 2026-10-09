@@ -1,0 +1,25 @@
+{
+  "mathematical_tests_run": 7,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "results_audit": {
+    "prediction_files_recomputed": [
+      "baseline_seed42_clean.npz",
+      "baseline_seed42_gaussian_noise_0.2.npz",
+      "vbll_seed42_clean.npz",
+      "vbll_seed42_gaussian_noise_0.2.npz",
+      "baseline_seed43_clean.npz",
+      "baseline_seed43_gaussian_noise_0.2.npz",
+      "vbll_seed43_clean.npz",
+      "vbll_seed43_gaussian_noise_0.2.npz",
+      "baseline_seed44_clean.npz",
+      "baseline_seed44_gaussian_noise_0.2.npz",
+      "vbll_seed44_clean.npz",
+      "vbll_seed44_gaussian_noise_0.2.npz"
+    ],
+    "all_metrics_match": true,
+    "all_checkpoints_selected_by_validation_nll": true,
+    "split_partition_valid": true
+  }
+}

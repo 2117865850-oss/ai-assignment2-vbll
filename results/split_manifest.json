@@ -1,0 +1,43 @@
+{
+  "split_seed": 2026,
+  "train_count": 12000,
+  "val_count": 2000,
+  "unused_count": 46000,
+  "train_sha256_int64": "564d7203561a0fee233dd55a44cfe8f96db2022d05b4412064c0168711b728cf",
+  "validation_sha256_int64": "c45f8bb656a47875f9f61ee48bf4bc15744eb72067a759a0a3b7be33d2978e5c",
+  "overlap": 0,
+  "train_per_class": [
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200
+  ],
+  "validation_per_class": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "dataset_files": {
+    "t10k-images-idx3-ubyte": "5b4141f0afbad91edebe8549f8fcffe087ea10ca49f1dbef5c9a5cd8815ce37b",
+    "t10k-images-idx3-ubyte.gz": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+    "t10k-labels-idx1-ubyte": "0402a96d92fd2663957122ceb108a494c5af83dab82d92729df917d7dec38c34",
+    "t10k-labels-idx1-ubyte.gz": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5",
+    "train-images-idx3-ubyte": "c59f468a2f672dc815687fe0f83887768d799fd8a3f3276145d20f83aa44d888",
+    "train-images-idx3-ubyte.gz": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+    "train-labels-idx1-ubyte": "bad3541b69d912435c50bb6ba87bec294ff4f6a2e1246121d8633921760443d9",
+    "train-labels-idx1-ubyte.gz": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845"
+  }
+}

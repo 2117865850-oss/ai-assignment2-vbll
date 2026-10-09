@@ -1,0 +1,35 @@
+[
+  {
+    "seed": 42,
+    "backbone_equal": true,
+    "mean_head_equal": true,
+    "backbone_sha256": "2330f4a998de8f3818aaebb6084d8366c9bcbea08491db1a848e791aedf80e5b",
+    "head_mean_sha256": "164decc339d73182435c1f6f7be6ba9771be4c002a6aedde0f8c5c07ba417628",
+    "trainable_parameters": {
+      "baseline": 105856,
+      "vbll": 106506
+    }
+  },
+  {
+    "seed": 43,
+    "backbone_equal": true,
+    "mean_head_equal": true,
+    "backbone_sha256": "edc035242b97db40aa0622284816862fa6ae066320d4e7bebe69172db6b430eb",
+    "head_mean_sha256": "598717ffd5710885203e09a04f6a0ea4eca36e261e2e7e22d53da863085a9ae7",
+    "trainable_parameters": {
+      "baseline": 105856,
+      "vbll": 106506
+    }
+  },
+  {
+    "seed": 44,
+    "backbone_equal": true,
+    "mean_head_equal": true,
+    "backbone_sha256": "f0fc64f3a2fa3b5a0f6ecc2526fb5f4d76d7939557320ce1b192739e60094a3e",
+    "head_mean_sha256": "d19355fabb1f81efa929f6dda6f9f98587077b2288b4d2aaa0f8547118f53255",
+    "trainable_parameters": {
+      "baseline": 105856,
+      "vbll": 106506
+    }
+  }
+]
